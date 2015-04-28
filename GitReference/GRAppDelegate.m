@@ -7,6 +7,7 @@
 //
 
 #import "GRAppDelegate.h"
+#import "PDViewController.h"
 
 @implementation GRAppDelegate
 
@@ -16,6 +17,12 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+//    add new view controller
+    PDViewController *viewController = [PDViewController new];
+//    scroll view below status bar
+    self.window.rootViewController = viewController;
+    
     return YES;
 }
 
